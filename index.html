@@ -9,13 +9,14 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">  
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
     <style>
       h2 {
         margin: 0 0 0 0;
         font-size: 0px;
       }
       h2 span {
-        font-family: 'Montserrat', sans-serif;
         font-family: 'Montserrat', sans-serif;
         font-weight: light;
         font-size: 9px;
@@ -183,9 +184,17 @@ li a:hover {
 .left-text {
 }
 .logo a {
-        text-decoration: none;
-        color:#333333
-      }
+    text-decoration: none;
+    color:#333333
+}
+.ui-tabs-tab.ui-corner-top.ui-state-default.ui-tab.ui-tabs-active.ui-state-active {
+  background: rgb(45,45,45);
+  border-color: rgb(50,50,50);
+}
+.ui-widget-header {
+  border: 1px solid #dddddd;
+  background: #ffffff;
+}
     </style>  
 </head>
 
@@ -222,10 +231,33 @@ li a:hover {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         </div>
-      <div class="col-xs-12 col-md-6">
-        <iframe width="100%" height="500px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/644732493&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-      </div>
+<div class="col-xs-12 col-md-6">
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Latest Tracks</a></li>
+      <li><a href="#tabs-2">Ambient and Scoring</a></li>
+      <li><a href="#tabs-3">Synth, Rock and Punk</a></li>
+    </ul>
+    <div id="tabs-1">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/644732493&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    <div id="tabs-2">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646058991&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    <div id="tabs-3">
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646060593&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+  </div>
+</div>
     </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
 </html>
