@@ -87,7 +87,7 @@
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: .4em;
-      color: rgb(195,195,195) !important;
+      color: rgba(190, 190, 190, .7) !important;
     }
 
     .lead {
@@ -110,11 +110,11 @@
     }
     .btn-primary {
       background-color: rgba(20,20,20,.9);
-      border-color: rgba(190,190,190,.6);
+      border-color: rgba(29, 63, 117, .7);
     }
     .btn-primary:hover{
       background-color: rgba(30,30,30,.9);
-      border-color: rgba(200,200,200,.6);
+      border-color: rgba(29, 63, 117, 1);
     }
     .btn-lg {
       border-radius: 0px;
@@ -173,7 +173,15 @@ li a:hover {
 
 .left-text h1 {
     font-size: 48px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+}
+.left-text h1:after{
+  position: relative;
+  top: -30px;
+  content: '_';
+  clear: both;
+  color: rgba(29, 63, 117, .7);
+  font-size: 64px;
 }
 .left-text p {
     font-size: 16px;
@@ -194,6 +202,20 @@ li a:hover {
 .ui-widget-header {
   border: 1px solid #dddddd;
   background: #ffffff;
+}
+.logo_soup {
+    background-image: linear-gradient(to right, rgba(45,45,45,1), rgba(45, 45, 45, .9));
+    height: 200px;
+}
+.logo_soup img {
+  max-height: 130px;
+  max-width: 130px;
+}
+.logo_soup .col-md-3 {
+  padding: 30px 20px 20px 20px;
+}
+.space {
+  height: 50px;
 }
     </style>  
 </head>
@@ -219,36 +241,52 @@ li a:hover {
             <p class="lead"></p>
             <p>Custom compositions for film and advertising.</p>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+              <a class="btn btn-primary btn-lg" href="#learnmore" role="button">Learn more</a>
             </p>
           </div>
       </div>
       <div class="container">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-6" id="learnmore">
           <div class="left-text">
-          <h1>The Right Sound, <br>Pain Free</h1>
+          <h1>The Right Sound, <br>Pain Free<br></h1>
           <p>Flatland is a Vancouver based creative agency, delivering incredible soundtracks for small and large scale projects.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
         </div>
+        <div class="col-xs-12 col-md-6">
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Latest Tracks</a></li>
+              <li><a href="#tabs-2">Ambient and Scoring</a></li>
+              <li><a href="#tabs-3">Synth, Rock and Punk</a></li>
+            </ul>
+            <div id="tabs-1">
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/644732493&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            </div>
+            <div id="tabs-2">
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646058991&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            </div>
+            <div id="tabs-3">
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646060593&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            </div>
+          </div>
         </div>
-<div class="col-xs-12 col-md-6">
-  <div id="tabs">
-    <ul>
-      <li><a href="#tabs-1">Latest Tracks</a></li>
-      <li><a href="#tabs-2">Ambient and Scoring</a></li>
-      <li><a href="#tabs-3">Synth, Rock and Punk</a></li>
-    </ul>
-    <div id="tabs-1">
-      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/644732493&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </div>
-    <div id="tabs-2">
-      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646058991&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </div>
-    <div id="tabs-3">
-      <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646060593&color=%23333333&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </div>
-  </div>
-</div>
+      </div>
+      <div class="container space"></div>
+      <div class="container-fluid logo_soup">
+        <div class="container">
+        <div class="col-xs-6 col-md-3"><img src="kingsnowlogosml.png"></div>
+
+        <div class="col-xs-6 col-md-3"><img src="VanWCFC.png"></div>
+
+        <div class="col-xs-6 col-md-3"><img src="Parkland-sml.png"></div>
+
+        <div class="col-xs-6 col-md-3"><img style="padding-top: 40px;" src="msb.png"></div>
+        </div>
+      </div>
+      <div class="container space"></div>
+
+      </div>
     </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -260,4 +298,10 @@ li a:hover {
     $( "#tabs" ).tabs();
   } );
   </script>
+          <script type="text/javascript">$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 700);
+    return false;
+});</script>
 </html>

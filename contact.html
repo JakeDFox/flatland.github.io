@@ -8,7 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <style>
       h2 {
         margin: 0 0 0 0;
@@ -109,11 +111,11 @@
     }
     .btn-primary {
       background-color: rgba(20,20,20,.9);
-      border-color: rgba(190,190,190,.6);
+      border-color: rgba(29, 63, 117, .7);
     }
     .btn-primary:hover{
       background-color: rgba(30,30,30,.9);
-      border-color: rgba(200,200,200,.6);
+      border-color: rgba(29, 63, 117, 1);
     }
     .btn-lg {
       border-radius: 0px;
@@ -176,7 +178,15 @@ li a:hover {
 
 .left-text h1 {
     font-size: 48px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+}
+.left-text h1:after{
+  position: relative;
+  top: -30px;
+  content: '_';
+  clear: both;
+  color: rgba(29, 63, 117, .7);
+  font-size: 64px;
 }
 .left-text p {
     font-size: 16px;
@@ -205,31 +215,33 @@ li a:hover {
       </div>
 <div id="main-jumbo" class="jumbotron jumbotron-fluid">
             <div class="container low">
-            <h1 class="display-4">Let's <br>Begin</h1>
-            <p class="lead"></p>
-            <!--
-            <p>Custom compositions for film and advertising.</p>
+            <h1 class="display-4">Let's Find<br>Your Sound</h1>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>-->
+              <a class="btn btn-primary btn-lg" href="#contact" role="button">Get In Touch</a>
+            </p>
           </div>
         </div>
       <div class="container">
         <div class="col-md-6 col-xs-12">
           <div class="left-text">
-          <h1>Let's work together!</h1>
+          <h1>Let's work together!<br></h1>
           <p>Flatland is a Vancouver based creative agency, delivering incredible soundtracks for small and large scale projects.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12" id="contact">
 <!-- www.123formbuilder.com script begins here -->
 <script type="text/javascript" defer src="//www.123formbuilder.com/embed/4420397.js" data-role="form" data-default-width="650px"></script>
 <!-- www.123formbuilder.com script ends here -->
         </div>
 
         </div>
+        <script type="text/javascript">$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 700);
+    return false;
+});</script>
     </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </html>
